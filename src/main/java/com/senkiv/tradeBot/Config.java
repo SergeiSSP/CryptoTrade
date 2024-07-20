@@ -17,6 +17,7 @@ public class Config {
     private String SECRET_KEY;
 
     @Bean
+    @Scope(scopeName = "singleton")
     BinanceApiRestClient client(){
         return BinanceApiClientFactory.newInstance(API_KEY, SECRET_KEY).newRestClient();
     }

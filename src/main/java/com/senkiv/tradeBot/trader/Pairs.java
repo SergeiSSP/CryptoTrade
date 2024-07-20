@@ -1,5 +1,8 @@
 package com.senkiv.tradeBot.trader;
 
+import lombok.Getter;
+
+@Getter
 public enum Pairs {
     BTCUSDT("BTCUSDT");
 
@@ -9,7 +12,4 @@ public enum Pairs {
         this.pair = pair;
     }
 
-    public String getPair(){
-        return pair;
-    }
 }
