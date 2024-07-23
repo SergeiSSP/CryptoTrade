@@ -2,6 +2,7 @@ package com.senkiv.tradeBot;
 
 import com.binance.api.client.BinanceApiClientFactory;
 import com.binance.api.client.BinanceApiRestClient;
+import com.pengrad.telegrambot.TelegramBot;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,6 +16,8 @@ public class Config {
     private String API_KEY;
     @Value("${SECRET_KEY}")
     private String SECRET_KEY;
+    @Value("${TELEGRAM_BOT_TOKEN}")
+    private String TELEGRAM_BOT_KEY;
 
     @Bean
     @Scope(scopeName = "singleton")
@@ -22,4 +25,9 @@ public class Config {
         return BinanceApiClientFactory.newInstance(API_KEY, SECRET_KEY).newRestClient();
     }
 
+    @Bean
+    @Scope(scopeName="singleton")
+    TelegramBot telegram(){
+        return new TelegramBot(TELEGRAM_BOT_KEY);
+    }
 }

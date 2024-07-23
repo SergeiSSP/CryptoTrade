@@ -4,12 +4,12 @@ import com.binance.api.client.BinanceApiRestClient;
 import org.springframework.stereotype.Component;
 
 @Component
-class Account {
+public class Wallet {
     private BinanceApiRestClient client;
     private int currentStake;
     private int openTrades;
-
-    Account(BinanceApiRestClient client){
+    private Pair displayCurrency;
+    Wallet(BinanceApiRestClient client){
         this.client = client;
     }
 }

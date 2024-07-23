@@ -66,6 +66,11 @@
 			<artifactId>ta4j-core</artifactId>
 			<version>0.16</version>
 		</dependency>
+		<dependency>
+			<groupId>com.github.pengrad</groupId>
+			<artifactId>java-telegram-bot-api</artifactId>
+			<version>7.7.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -10,11 +10,7 @@ public abstract class AbstractStrategy {
     private int timeFrame;
     private int startOffSet;
 
-    public AbstractStrategy(boolean isDryRun, int timeFrame, int startOffSet){
-        this.isDryRun = isDryRun;
-        this.timeFrame = timeFrame;
-        this.startOffSet = startOffSet;
-    }
+
 
     abstract public boolean buyIndicator();
 
