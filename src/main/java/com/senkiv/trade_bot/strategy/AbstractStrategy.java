@@ -1,7 +1,6 @@
 package com.senkiv.trade_bot.strategy;
 
 import com.binance.api.client.domain.account.NewOrderResponse;
-import com.binance.api.client.domain.account.Order;
 import com.binance.api.client.domain.market.CandlestickInterval;
 import com.senkiv.trade_bot.trader.Observer;
 import lombok.Getter;

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class TelegramDispatcher {
     @Value("${CHAT_ID}")
     private long CHAT_ID;
-    private TelegramBot bot;
+    private final TelegramBot bot;
 
     public TelegramDispatcher(TelegramBot bot) {
         this.bot = bot;

@@ -90,7 +90,7 @@ public class SimpleBot implements Observer, Trader{
     }
 
     public void addWorkingPair(Pair pair){
-        workingPairs.put(pair, new ArrayList<Candlestick>());
+        workingPairs.put(pair, new ArrayList<>());
     }
 
 
