@@ -1,4 +1,4 @@
-package com.senkiv.tradeBot.telegram;
+package com.senkiv.trade_bot.telegram;
 
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.request.SendMessage;

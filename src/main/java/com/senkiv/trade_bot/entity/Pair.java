@@ -1,4 +1,4 @@
-package com.senkiv.tradeBot.trader;
+package com.senkiv.trade_bot.entity;
 
 import lombok.Getter;
 
