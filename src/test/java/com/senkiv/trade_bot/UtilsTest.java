@@ -1,5 +1,6 @@
 package com.senkiv.trade_bot;
 
+import com.senkiv.trade_bot.util.Util;
 import org.junit.jupiter.api.Test;
 
 import java.time.*;
@@ -7,10 +8,10 @@ import java.time.*;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UtilsTest {
+class UtilsTest {
     @Test
     void shouldCalculateTimeAndDateFromEpoch(){
-        String result = Util.longToDate(1697925600000L);
+        String result = Util.longToDate(1697925600000L).toString();
         assertEquals("2023-10-22T00:00", result);
     }
 

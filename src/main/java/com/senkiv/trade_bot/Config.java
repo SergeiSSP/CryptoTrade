@@ -2,6 +2,7 @@ package com.senkiv.trade_bot;
 
 import com.binance.api.client.BinanceApiClientFactory;
 import com.binance.api.client.BinanceApiRestClient;
+import com.binance.api.client.domain.account.Account;
 import com.pengrad.telegrambot.TelegramBot;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -29,5 +30,11 @@ public class Config {
     @Scope(scopeName="singleton")
     TelegramBot telegram(){
         return new TelegramBot(TELEGRAM_BOT_KEY);
+    }
+
+    @Bean
+    @Scope(scopeName="singleton")
+    Account account(){
+        return new Account();
     }
 }

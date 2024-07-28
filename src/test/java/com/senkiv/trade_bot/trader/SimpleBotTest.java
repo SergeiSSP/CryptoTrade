@@ -18,10 +18,10 @@ import static org.junit.Assert.assertEquals;
 public class SimpleBotTest {
 
     @Autowired
-    SimpleBot simpleBot;
+    Observer observer;
     @Test
     public void shouldReturn500ItemsInList(){
-        List<Candlestick> list = simpleBot.getHistoricInfo(Pair.BTCUSDT.getPair(), LocalDateTime.of(2024, 1, 1, 10, 10));
+        List<Candlestick> list = observer.getHistoricInfo(Pair.BTCUSDT.getPair(), LocalDateTime.of(2024, 1, 1, 10, 10));
         assertEquals(500, list.size());
     }
 }
