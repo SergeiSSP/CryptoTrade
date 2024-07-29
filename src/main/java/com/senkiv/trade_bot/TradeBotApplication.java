@@ -1,5 +1,6 @@
 package com.senkiv.trade_bot;
 
+import com.senkiv.trade_bot.trader.Executor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,8 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TradeBotApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TradeBotApplication.class, args);
-
+		var context = SpringApplication.run(TradeBotApplication.class, args);
+		var executor = context.getBean(Executor.class);
+		executor.execute();
 	}
 
 }
